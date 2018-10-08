@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Panoramic Tour</title>
+  
+  <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"
+  />
+  <style>
+    @-ms-viewport {
+      width: device-width;
+    }
+  </style>
+  <!-- <link rel="stylesheet" href="http://www.marzipano.net/demos/common/reset.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="mobile__touchBLock" id='js-mobile__touchBLock'></div>
+  <div id="panoLeft">
+    <div class="vr_point" id="js-point-block"><img id="js-point" src="img/reticle-idle.png" alt="">
+       <!-- <img src="img/loader.gif" alt="" id="js-loader"> -->
+      </div>
+  </div>
+  <div id="panoRight"></div>
+  <div id="toggleDeviceOrientation">
+    <img class="enable" src="img/virtual.svg">
+    <img class="disable" src="img/panorama.svg">
+  </div>
+
+  <script src="js/marzipano.js"></script>
+  <script src="js/mobileControlPoint.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/DeviceOrientationControlMethod.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    window.onload = function () {
+      panoramicApp.initScreenApp()
+    }
+  </script>
+</body>
+
+</html>
